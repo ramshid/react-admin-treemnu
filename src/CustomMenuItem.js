@@ -23,6 +23,9 @@ const useStyles = makeStyles(
         iconOpen: {
             color: '#37A9F6'
         },
+        arrowIcon: {
+            display: 'block'
+        },
     sidebarIsClosed: {
         '& a': {
             paddingLeft: theme.spacing(2),
@@ -80,7 +83,7 @@ const CustomMenuItem = ({
             >
                 {translate(name)}
             </Typography>
-            <ListItemIcon className={classes.icon}>
+            <ListItemIcon className={classes.arrowIcon}>
                 {isOpen ? <ExpandLessIcon /> : <ExpandMore /> }
             </ListItemIcon>
         </MenuItem>

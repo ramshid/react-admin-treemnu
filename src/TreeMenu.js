@@ -13,6 +13,7 @@ import { useSelector, shallowEqual } from 'react-redux';
 import classnames from 'classnames';
 import DefaultIcon from '@material-ui/icons/ViewList';
 import CustomMenuItem from './CustomMenuItem';
+import DashboardOutlinedIcon from '@material-ui/icons/DashboardOutlined';
 
 const useStyles = makeStyles(
     theme => ({
@@ -232,6 +233,7 @@ const Menu = (props) => {
             >
                 {hasDashboard && (
                     <DashboardMenuItem
+                        leftIcon={<DashboardOutlinedIcon />}
                         onClick={onMenuClick}
                         dense={dense}
                         sidebarIsOpen={open}

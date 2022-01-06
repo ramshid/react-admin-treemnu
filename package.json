@@ -1,6 +1,6 @@
 {
-  "name": "@bb-tech/ra-treemenu",
-  "version": "1.0.7",
+  "name": "@ramshid/react-admin-treemnu",
+  "version": "1.0.8",
   "description": "A tree-like menu implementation for react-admin applications.",
   "author": "BigBasket Tech",
   "repository": "BigBasket/ra-treemenu",

@@ -20,17 +20,24 @@ const useStyles = makeStyles(
             transition: 'padding-left 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
             },
         },
+        iconOpen: {
+            color: '#37A9F6'
+        },
     sidebarIsClosed: {
         '& a': {
             paddingLeft: theme.spacing(2),
             transition: 'padding-left 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
             },
         },
-        menuItem: {},
+        menuItem: {display: 'flex'},
         menuItemName: {
+            flex: 1,
             color: theme.palette.secondary
         },
-        openMenuItem: {}
+        openMenuItem: {
+            background: '#F3F4F6',
+            color: '#37A9F6'
+        }
     }),
     { name: 'RaTreeCustomMenuItem' }
 );
@@ -58,7 +65,10 @@ const CustomMenuItem = ({
                 { [classes.openMenuItem]: isOpen }
             )}
         >
-            <ListItemIcon className={classes.icon}>
+            <ListItemIcon className={classnames(
+                classes.icon,
+                {[classes.iconOpen]: isOpen }
+                )}>
                 {icon}
             </ListItemIcon>
             <Typography
@@ -71,7 +81,7 @@ const CustomMenuItem = ({
                 {translate(name)}
             </Typography>
             <ListItemIcon className={classes.icon}>
-                {isOpen ? <ExpandMore /> : <ExpandLessIcon />}
+                {isOpen ? <ExpandLessIcon /> : <ExpandMore /> }
             </ListItemIcon>
         </MenuItem>
     );

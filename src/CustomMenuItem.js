@@ -24,7 +24,8 @@ const useStyles = makeStyles(
             color: '#37A9F6'
         },
         arrowIcon: {
-            display: 'block'
+            display: 'block',
+            minWidth: 'auto'
         },
     sidebarIsClosed: {
         '& a': {
